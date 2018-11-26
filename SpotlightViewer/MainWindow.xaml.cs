@@ -78,6 +78,9 @@ namespace SpotlightViewer
         private void SaveButton_Click(object sender, RoutedEventArgs e)
         {
             var sfd = new SaveFileDialog();
+            sfd.Filter = "JPG (*.jpg)|*.jpg";
+            sfd.DefaultExt = "jpg";
+            sfd.AddExtension = true;
             var res = sfd.ShowDialog();
             if (res == true)
             {
